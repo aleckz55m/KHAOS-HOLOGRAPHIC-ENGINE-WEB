@@ -10,7 +10,7 @@ Versión preparada para GitHub Pages a partir del motor original. `index.html` c
 4. Espera a que GitHub Pages publique el sitio. La dirección de un repositorio de proyecto suele tener el formato `https://USUARIO.github.io/REPOSITORIO/`.
 5. Abre esa dirección en Chrome para Android. Confirma que la barra indica HTTPS.
 
-La sesión de trabajo no tenía un checkout de este proyecto ni una conexión GitHub seleccionada, por lo que no se pudo activar Pages ni determinar el dominio final.
+El sitio ya está publicado en HTTPS: https://aleckz55m.github.io/KHAOS-HOLOGRAPHIC-ENGINE-WEB/. GitHub Pages se sirve desde la rama `main`, carpeta raíz, con HTTPS obligatorio.
 
 ## Cámara
 

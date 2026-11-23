@@ -219,7 +219,7 @@ function buildM5Visual(m5){
  }
  const particlePositions=new Float32Array(115*3);
  for(let i=0;i<115;i++){const a=i*2.399,t=(i%23)/23,r=.12+t*.46;particlePositions[i*3]=Math.cos(a)*r;particlePositions[i*3+1]=Math.sin(a)*r*.8;particlePositions[i*3+2]=Math.sin(a*.7)*r*.65}
- const pgeo=new THREE.BufferGeometry();pgeo.setAttribute('position',new THREE.BufferAttribute(particlePositions,3));
+ const pgeo=new THREE.BufferGeometry();pgeo.setAttribute('position',new THREE.Float32BufferAttribute(particlePositions,3));
  const particles=new THREE.Points(pgeo,new THREE.PointsMaterial({color:0xb5ffff,size:.025,transparent:true,opacity:.95}));atm.add(particles);atm.userData.particles=particles;
  // Nucleus A: 240 visual stars, five spiral arms, source values retained as metadata.
  const nucleusA=new THREE.Group();nucleusA.position.set(-.57,.05,.02);m5Group.add(nucleusA);
@@ -231,7 +231,7 @@ function buildM5Visual(m5){
   starPositions[i*3+1]=Math.sin(angle)*rad+(Math.cos(i*8.1)*.018);
   starPositions[i*3+2]=(Math.sin(i*4.7)*.07)*(1-t*.4);
  }
- const sgeo=new THREE.BufferGeometry();sgeo.setAttribute('position',new THREE.BufferAttribute(starPositions,3));
+ const sgeo=new THREE.BufferGeometry();sgeo.setAttribute('position',new THREE.Float32BufferAttribute(starPositions,3));
  nucleusA.add(new THREE.Points(sgeo,new THREE.PointsMaterial({color:0xffe5a0,size:.025,transparent:true,opacity:.96,sizeAttenuation:true})));
  const core=new THREE.Mesh(new THREE.SphereGeometry(.075,16,12),new THREE.MeshBasicMaterial({color:0xffd889}));nucleusA.add(core);
  const aHalo=new THREE.Mesh(new THREE.SphereGeometry(.36,20,16),new THREE.MeshBasicMaterial({color:0xffc76b,wireframe:true,transparent:true,opacity:.10}));nucleusA.add(aHalo);
